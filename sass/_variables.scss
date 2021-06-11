@@ -1,0 +1,36 @@
+:root {
+  //BACKGROUNDS
+  //THEME 1
+  --main-bg-1: hsl(222, 26%, 31%);
+  --toggle-key-bg-1: hsl(223, 31%, 20%);
+  --screen-bg-1: hsl(224, 36%, 15%);
+
+  //THEME 2
+  --main-bg-2: hsl(0, 0%, 90%);
+  --toggle-key-bg-2: hsl(0, 5%, 81%);
+  --screen-bg-2: hsl(0, 0%, 93%);
+
+  //THEME 3 ---- // toggle, key-bg and screen-bg all same color
+  --main-bg-3: hsl(268, 75%, 9%);
+  --toggle-key-bg-3: hsl(268, 71%, 12%);
+  --screen-bg-3: hsl(268, 71%, 12%);
+
+  //KEYS -1
+  --key-bg-secondary-1: hsl(225, 21%, 49%);
+  --key-shadow-secondary-1: hsl(224, 28%, 35%);
+
+  --key-bg-accent-1: hsl(6, 63%, 50%);
+  --key-shadow-accent-1: hsl(6, 70%, 34%);
+
+  --key-bg-main-1: hsl(30, 25%, 89%);
+  --key-shadow-main-1: hsl(28, 16%, 65%);
+
+  //TEXT -1
+  //   Very dark grayish blue:
+  --text-dark-1: hsl(221, 14%, 31%);
+  // same white for all themes
+  --text-white: hsl(0, 0, 100%);
+
+  // border-radius
+  --container-radius: 15px;
+}
