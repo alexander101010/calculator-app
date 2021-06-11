@@ -29,7 +29,63 @@
   </head>
   <body>
     <main>
-      <h1>I know my calculus, it says U + ME = US</h1>
+      <header class="header">
+        <h1 class="header__title">calc</h1>
+        <h3 class="header__slider-title">theme</h3>
+        <form class="toggle_radio">
+          <label for="first_toggle">1</label>
+          <label for="second_toggle">2</label>
+          <label for="third_toggle">3</label>
+          <input
+            type="radio"
+            class="toggle_option"
+            id="first_toggle"
+            name="toggle_option"
+            value="1"
+            checked
+          />
+          <input
+            type="radio"
+            class="toggle_option"
+            id="second_toggle"
+            name="toggle_option"
+            value="2"
+            checked
+          />
+          <input
+            type="radio"
+            class="toggle_option"
+            id="third_toggle"
+            name="toggle_option"
+            value="3"
+          />
+          <div class="toggle_option_slider"></div>
+        </form>
+
+        <div class="output__container">
+          <p class="output__value">399,981</p>
+        </div>
+
+        <div class="button__container">
+          <button class="key key-main" id="key7">7</button>
+          <button class="key key-main" id="key8">8</button>
+          <button class="key key-main" id="key9">9</button>
+          <button class="key key-secondary" id="key-del">del</button>
+          <button class="key key-main" id="key4">4</button>
+          <button class="key key-main" id="key5">5</button>
+          <button class="key key-main" id="key6">6</button>
+          <button class="key key-main" id="key1">1</button>
+          <button class="key key-main" id="key2">2</button>
+          <button class="key key-main" id="key3">3</button>
+          <button class="key key-main" id="key-plus">+</button>
+          <button class="key key-main" id="key-minus">-</button>
+          <button class="key key-main" id="key-mult">x</button>
+          <button class="key key-main" id="key-dot">.</button>
+          <button class="key key-main" id="key-divide">/</button>
+          <button class="key key-secondary" id="key-reset">reset</button>
+          <button class="key" id="key-equals">=</button>
+        </div>
+      </header>
     </main>
     <div class="attribution">
       Challenge by
