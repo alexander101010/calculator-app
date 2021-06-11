@@ -12,55 +12,53 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Frontend Mentor | Calculator app</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main>
-      <header class="header">
-        <h1 class="header__title">calc</h1>
-        <h3 class="header__slider-title">theme</h3>
-        <form class="toggle_radio">
-          <label for="first_toggle">1</label>
-          <label for="second_toggle">2</label>
-          <label for="third_toggle">3</label>
-          <input
-            type="radio"
-            class="toggle_option"
-            id="first_toggle"
-            name="toggle_option"
-            value="1"
-            checked
-          />
-          <input
-            type="radio"
-            class="toggle_option"
-            id="second_toggle"
-            name="toggle_option"
-            value="2"
-            checked
-          />
-          <input
-            type="radio"
-            class="toggle_option"
-            id="third_toggle"
-            name="toggle_option"
-            value="3"
-          />
-          <div class="toggle_option_slider"></div>
-        </form>
+      <div class="container">
+        <header class="header">
+          <h1 class="header__title">calc</h1>
+          <div class="header__slider-box">
+            <h3 class="header__slider-title">theme</h3>
+            <form class="toggle_radio">
+              <label for="first_toggle">1</label>
+              <label for="second_toggle">2</label>
+              <label for="third_toggle">3</label>
+              <input
+                type="radio"
+                class="toggle_option"
+                id="first_toggle"
+                name="toggle_option"
+                value="1"
+                checked
+              />
+              <input
+                type="radio"
+                class="toggle_option"
+                id="second_toggle"
+                name="toggle_option"
+                value="2"
+              />
+              <input
+                type="radio"
+                class="toggle_option"
+                id="third_toggle"
+                name="toggle_option"
+                value="3"
+              />
+              <div class="toggle_option_slider"></div>
+            </form>
+          </div>
+        </header>
 
         <div class="output__container">
           <p class="output__value">399,981</p>
@@ -74,27 +72,35 @@
           <button class="key key-main" id="key4">4</button>
           <button class="key key-main" id="key5">5</button>
           <button class="key key-main" id="key6">6</button>
+          <button class="key key-main" id="key-plus">+</button>
           <button class="key key-main" id="key1">1</button>
           <button class="key key-main" id="key2">2</button>
           <button class="key key-main" id="key3">3</button>
-          <button class="key key-main" id="key-plus">+</button>
           <button class="key key-main" id="key-minus">-</button>
-          <button class="key key-main" id="key-mult">x</button>
           <button class="key key-main" id="key-dot">.</button>
+          <button class="key key-main" id="key0">0</button>
           <button class="key key-main" id="key-divide">/</button>
+          <button class="key key-main" id="key-mult">x</button>
           <button class="key key-secondary" id="key-reset">reset</button>
-          <button class="key" id="key-equals">=</button>
+          <button class="key key-equals" id="key-equals">=</button>
         </div>
-      </header>
+      </div>
     </main>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by
-      <a href="https://www.github.com/alexander101010" target="_blank"
-        >Alex Botwinick</a
-      >.
-    </div>
+    <footer class="footer">
+      <div class="attribution">
+        <p class="attribution-p">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >.
+        </p>
+        <p class="attribution-p">
+          Coded by
+          <a href="https://www.github.com/alexander101010" target="_blank"
+            >Alex Botwinick</a
+          >.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
