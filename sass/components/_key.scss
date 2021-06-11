@@ -1,0 +1,45 @@
+// keys are buttons with key class
+.key {
+  // styles for all keys
+
+  font-size: 32px;
+  padding: 1rem 2rem;
+  font-family: inherit;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: translateY(2px);
+    border-bottom: none;
+  }
+
+  &-main {
+    color: var(--text-dark-1);
+    background-color: var(--key-bg-main-1);
+    border-bottom: 4px solid var(--key-shadow-main-1);
+  }
+
+  &-secondary {
+    background-color: var(--key-bg-secondary-1);
+    border-bottom: 5px solid var(--key-shadow-secondary-1);
+
+    color: var(--text-white); // why doesn't this work?
+    color: hsl(0, 0, 100%);
+    text-transform: uppercase;
+  }
+
+  &-equals {
+    background-color: var(--key-bg-accent-1);
+    border-bottom: 5px solid var(--key-shadow-accent-1);
+
+    color: var(--text-white); // why doesn't this work?
+    color: hsl(0, 0, 100%);
+  }
+}
