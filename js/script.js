@@ -58,7 +58,6 @@ deleteButton.addEventListener('click', () => {
 /////////******************************************************* */
 /////////******************************************************* */
 
-// let currentTheme;
 const labelBtns = document.querySelectorAll('.theme__label-btn');
 const dotBtns = document.querySelectorAll('.theme__slider-position');
 const [dot1, dot2, dot3] = dotBtns;
@@ -66,33 +65,63 @@ const themeBtns = [...labelBtns, ...dotBtns];
 const html = document.querySelector('html');
 const themes = { 1: 'default', 2: 'light', 3: 'dark' };
 const themeNums = { default: 1, light: 2, dark: 3 };
-let currentTheme = html.dataset.theme;
 
-function initDot() {
-  updateDot();
+let currentTheme = 'default';
+
+// FIRST CHECK FOR USER COLOR THEME PREFERENCE
+
+const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+// userPrefersDark.matches --> returns true or false
+if (userPrefersDark.matches) {
+  // initialize theme to dark
+  currentTheme = 'dark';
+  updateTheme();
 }
-initDot();
+
+const userPrefersLight = window.matchMedia('(prefers-color-scheme: light)');
+if (userPrefersLight.matches) {
+  currentTheme = 'light';
+  console.log('light mode');
+}
+
+// INIT DOT AND THEME (in case neither light or dark preferred -- thus default is used)
+function init() {
+  updateDot();
+  updateTheme();
+}
+init();
+
+function updateTheme() {
+  html.dataset.theme = currentTheme;
+}
 
 // LISTEN FOR CLICKS ON THEME BUTTONS, BOTH LABELS AND DOTS
-themeBtns.forEach((btn) => btn.addEventListener('click', updateTheme));
+themeBtns.forEach((btn) => btn.addEventListener('click', updateThemeOnClick));
 
 function updateDot() {
   dotBtns.forEach((dot) => dot.classList.remove('active'));
   dotBtns[themeNums[currentTheme] - 1].classList.add('active');
 }
 
-function updateTheme() {
+function updateThemeOnClick() {
   const clickedTheme = this.innerText; // number of theme as string
   if (themes[clickedTheme] === currentTheme) {
-    console.log('that theme is already active');
     return;
   } else {
     currentTheme = themes[clickedTheme];
-    html.dataset.theme = currentTheme;
+    updateTheme();
     updateDot();
   }
 }
 
+// const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+// if (prefersDarkScheme.matches) {
+//   currentTheme = 'dark';
+// } else {
+//   console.log('not dark mode ');
+// }
+
+// window.addEventListener('load', () => console.log('load'));
 // ***********CODE BEFORE A REFACTOR TO BUILD CALCULATOR CLASS*******
 // Operation buttons ( +,-,x,/)
 /***
