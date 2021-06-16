@@ -24,78 +24,79 @@
     <script type="module" src="./js/script.js" defer></script>
   </head>
   <body>
-    <main class="main">
-      <div class="container">
-        <header class="header">
-          <h1 class="header__title">calc</h1>
-          <div class="header__theme-box">
-            <h3 class="header__theme-title">theme</h3>
-            <div class="theme__btn-container">
-              <div class="theme__label-box">
-                <button class="theme__label-btn theme__label-btn-1">1</button
-                ><button class="theme__label-btn theme__label-btn-2">2</button
-                ><button class="theme__label-btn theme__label-btn-3">3</button>
-              </div>
-              <div class="theme__slider-box">
-                <button class="theme__slider-position theme__slider-position-1 active">1</button>
-                <button class="theme__slider-position theme__slider-position-2 active">2</button>
-                <button class="theme__slider-position theme__slider-position-3 active">3</button>
-              </div>
-            </div>
-        </header>
+      <div class="main-container">
+        <div class="calculator">
 
-        <div class="output__container">
-          <div class="output__previous-term-box">
-            <p data-previous-operand class="output__previous-term"></p>
+          <header class="header">
+            <h1 class="header__title">calc</h1>
+            <div class="header__theme-box">
+              <h3 class="header__theme-title">theme</h3>
+              <div class="theme__btn-container">
+                <div class="theme__label-box">
+                  <button class="theme__label-btn theme__label-btn-1">1</button
+                    ><button class="theme__label-btn theme__label-btn-2">2</button
+                      ><button class="theme__label-btn theme__label-btn-3">3</button>
+                    </div>
+                    <div class="theme__slider-box">
+                      <button class="theme__slider-position theme__slider-position-1 active">1</button>
+                      <button class="theme__slider-position theme__slider-position-2 active">2</button>
+                      <button class="theme__slider-position theme__slider-position-3 active">3</button>
+                    </div>
+                  </div>
+                </header>
+                
+                <div class="output__container">
+                  <div class="output__previous-term-box">
+                    <p data-previous-operand class="output__previous-term"></p>
+                  </div>
+                  <div class="output__value-box">
+                    <p data-current-operand class="output__value">399,981</p>
+                  </div>
+                </div>
+                
+                <div class="button__container">
+                  <button data-number class="key key-main" id="key7">7</button>
+                  <button data-number class="key key-main" id="key8">8</button>
+                  <button data-number class="key key-main" id="key9">9</button>
+                  <button data-delete class="key key-secondary" id="key-del">
+                    del
+                  </button>
+                  <button data-number class="key key-main" id="key4">4</button>
+                  <button data-number class="key key-main" id="key5">5</button>
+                  <button data-number class="key key-main" id="key6">6</button>
+                  <button data-operation class="key key-main" id="key-add">+</button>
+                  <button data-number class="key key-main" id="key1">1</button>
+                  <button data-number class="key key-main" id="key2">2</button>
+                  <button data-number class="key key-main" id="key3">3</button>
+                  <button data-operation class="key key-main" id="key-subtract">
+                    -
+                  </button>
+                  <button data-number class="key key-main" id="key-dot">.</button>
+                  <button data-number class="key key-main" id="key0">0</button>
+                  <button data-operation class="key key-main" id="key-divide">/</button>
+                  <button data-operation class="key key-main">x</button>
+                  <button data-reset class="key key-secondary" id="key-reset">
+                    reset
+                  </button>
+                  <button data-equals class="key key-equals" id="key-equals">=</button>
+                </div>
+              </div>
+                <footer class="footer">
+                  <div class="attribution">
+                    <p class="attribution-p">
+                      Challenge by
+                      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+                      >Frontend Mentor</a
+                      >.
+                    </p>
+                    <p class="attribution-p">
+                      Coded by
+                      <a href="https://www.github.com/alexander101010" target="_blank"
+                      >Alex Botwinick</a
+              >.
+            </p>
           </div>
-          <div class="output__value-box">
-            <p data-current-operand class="output__value">399,981</p>
-          </div>
-        </div>
-
-        <div class="button__container">
-          <button data-number class="key key-main" id="key7">7</button>
-          <button data-number class="key key-main" id="key8">8</button>
-          <button data-number class="key key-main" id="key9">9</button>
-          <button data-delete class="key key-secondary" id="key-del">
-            del
-          </button>
-          <button data-number class="key key-main" id="key4">4</button>
-          <button data-number class="key key-main" id="key5">5</button>
-          <button data-number class="key key-main" id="key6">6</button>
-          <button data-operation class="key key-main" id="key-add">+</button>
-          <button data-number class="key key-main" id="key1">1</button>
-          <button data-number class="key key-main" id="key2">2</button>
-          <button data-number class="key key-main" id="key3">3</button>
-          <button data-operation class="key key-main" id="key-subtract">
-            -
-          </button>
-          <button data-number class="key key-main" id="key-dot">.</button>
-          <button data-number class="key key-main" id="key0">0</button>
-          <button data-operation class="key key-main" id="key-divide">/</button>
-          <button data-operation class="key key-main">x</button>
-          <button data-reset class="key key-secondary" id="key-reset">
-            reset
-          </button>
-          <button data-equals class="key key-equals" id="key-equals">=</button>
-        </div>
+        </footer>
       </div>
-    </main>
-    <footer class="footer">
-      <div class="attribution">
-        <p class="attribution-p">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >.
-        </p>
-        <p class="attribution-p">
-          Coded by
-          <a href="https://www.github.com/alexander101010" target="_blank"
-            >Alex Botwinick</a
-          >.
-        </p>
-      </div>
-    </footer>
   </body>
 </html>
