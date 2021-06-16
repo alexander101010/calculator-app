@@ -21,25 +21,23 @@
   }
 
   &-main {
-    color: var(--text-dark-1);
-    background-color: var(--key-bg-main-1);
-    border-bottom: 4px solid var(--key-shadow-main-1);
+    color: var(--text-key-main);
+    background-color: var(--key-bg-main);
+    border-bottom: 4px solid var(--key-shadow-main);
   }
 
   &-secondary {
-    background-color: var(--key-bg-secondary-1);
-    border-bottom: 5px solid var(--key-shadow-secondary-1);
+    background-color: var(--key-bg-secondary);
+    border-bottom: 5px solid var(--key-shadow-secondary);
 
-    color: var(--text-white); // why doesn't this work?
-    color: hsl(0, 0, 100%);
+    color: var(--text-key-secondary);
     text-transform: uppercase;
   }
 
   &-equals {
-    background-color: var(--key-bg-accent-1);
-    border-bottom: 5px solid var(--key-shadow-accent-1);
+    background-color: var(--key-bg-accent);
+    border-bottom: 5px solid var(--key-shadow-accent);
 
-    color: var(--text-white); // why doesn't this work?
-    color: hsl(0, 0, 100%);
+    color: var(--text-key-accent);
   }
 }
