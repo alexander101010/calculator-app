@@ -2,12 +2,12 @@
   font-size: 11px;
   text-align: center;
   margin: 2rem;
-
+  color: var(--key-bg-secondary);
   p {
     padding: 3px;
   }
 }
 .attribution a {
-  color: whitesmoke;
+  color: var(--key-bg-accent);
   text-decoration: none;
 }
