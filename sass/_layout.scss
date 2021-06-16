@@ -1,3 +1,21 @@
+.main-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.calculator {
+  margin-top: 2rem;
+  width: 40rem;
+  @media only screen and (max-width: 800px) {
+    width: 80vw;
+  }
+  display: grid;
+
+  grid-row-gap: 2rem;
+}
+/** 
 .main {
   display: flex;
   height: auto;
@@ -6,25 +24,14 @@
   padding: 3rem 0;
   flex: 1 1 100vw;
   // margin: 3rem auto;
-
+  
   @media only screen and (max-width: 800px) {
     padding: 1rem 0;
   }
 }
-
 .container {
-  width: 40rem;
-  // width: 37.5rem; //FIXME: temporary fixed width
-  // height: 80vh;
-  @media only screen and (max-width: 800px) {
-    width: 80vw;
-  }
-  display: grid;
-  // grid-template-rows: auto minmax(10rem, auto);
-
-  grid-row-gap: 2rem;
-  margin-left: -10px;
 }
+**/
 
 .footer {
   display: flex;
