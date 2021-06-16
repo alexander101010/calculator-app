@@ -11,6 +11,11 @@
   transition: all 0.2s;
   cursor: pointer;
 
+  @media only screen and (max-width: 500px) {
+    padding: 1rem 1rem 0.4rem 1rem;
+    font-size: 24px;
+  }
+
   &:focus {
     outline: none;
   }
@@ -32,6 +37,9 @@
 
     color: var(--text-key-secondary);
     text-transform: uppercase;
+    @media only screen and (max-width: 600px) {
+      font-size: 0.8rem;
+    }
   }
 
   &-equals {
@@ -39,5 +47,12 @@
     border-bottom: 5px solid var(--key-shadow-accent);
 
     color: var(--text-key-accent);
+  }
+}
+
+#key-del {
+  @media only screen and (max-width: 500px) {
+    font-size: 0.8rem;
+    padding: 1rem 0.5rem 0.4rem 0.5rem;
   }
 }
