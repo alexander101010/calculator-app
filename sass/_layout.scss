@@ -1,18 +1,35 @@
-main {
-  display: grid;
+.main {
+  display: flex;
+  height: auto;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
   padding: 3rem 0;
+  flex: 1 1 100vw;
+  // margin: 3rem auto;
+
+  @media only screen and (max-width: 800px) {
+    padding: 1rem 0;
+  }
 }
 
 .container {
   width: 40rem;
   // width: 37.5rem; //FIXME: temporary fixed width
   // height: 80vh;
+  @media only screen and (max-width: 800px) {
+    width: 80vw;
+  }
   display: grid;
   // grid-template-rows: auto minmax(10rem, auto);
 
   grid-row-gap: 2rem;
+  margin-left: -10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // HEADER calc title and theme slider
@@ -35,6 +52,21 @@ main {
     margin-right: 2rem;
     font-size: 0.8rem;
     letter-spacing: 1px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    &__title {
+      font-size: 1.8rem;
+    }
+    &__theme-title {
+      text-transform: uppercase;
+      margin-right: 2rem;
+      font-size: 0.6rem;
+      letter-spacing: 1px;
+    }
+    &__theme-box {
+      margin-left: -10px;
+    }
   }
 }
 
@@ -87,6 +119,43 @@ main {
       // padding: 2.5rem;
     }
   }
+
+  @media only screen and (max-width: 800px) {
+    &__previous-term {
+      font-size: 1rem;
+      padding-top: 1rem;
+      padding-left: 2.5rem;
+      min-height: 1.6rem;
+      line-height: 1;
+      align-self: center;
+
+      color: var(--text-output-previous);
+
+      &-box {
+        // border: 1px solid goldenrod;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        // display: none;
+      }
+    }
+    &__value {
+      text-align: right;
+      font-size: 24px;
+      color: var(--text-output); // TODO: THEME
+      word-wrap: break-word;
+      word-break: break-all;
+      padding-right: 2.5rem;
+      &-box {
+        min-height: 3rem;
+        // border: 1px solid goldenrod;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        // padding: 2.5rem;
+      }
+    }
+  }
 }
 
 // button container
@@ -98,6 +167,10 @@ main {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
   padding: 2rem;
+  @media only screen and (max-width: 800px) {
+    grid-gap: 0.8rem;
+    padding: 1.2rem;
+  }
 }
 
 #key-reset {
