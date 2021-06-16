@@ -37,10 +37,11 @@ button {
   margin-top: 2rem;
   width: 40rem;
   display: grid;
-  grid-row-gap: 2rem; }
+  grid-row-gap: 1.6rem; }
   @media only screen and (max-width: 800px) {
     .calculator {
-      width: 80vw; } }
+      width: 80vw;
+      grid-row-gap: 1rem; } }
 
 /** 
 .main {
@@ -155,8 +156,8 @@ button {
   border-radius: var(--container-radius);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
-  padding: 2rem; }
+  grid-gap: 1.2rem;
+  padding: 1.6rem; }
   @media only screen and (max-width: 800px) {
     .button__container {
       grid-gap: 0.8rem;
@@ -274,8 +275,7 @@ html[data-theme='dark'] {
     padding: 1rem 0.5rem 0.4rem 0.5rem; } }
 
 .theme__btn-container {
-  display: grid;
-  padding-bottom: 30px; }
+  display: grid; }
 
 .theme__label-box {
   display: flex;
