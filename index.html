@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,68 +21,63 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Frontend Mentor | Calculator app</title>
+    <script type="module" src="./js/script.js" defer></script>
   </head>
   <body>
     <main>
       <div class="container">
         <header class="header">
           <h1 class="header__title">calc</h1>
-          <div class="header__slider-box">
-            <h3 class="header__slider-title">theme</h3>
-            <form class="toggle_radio">
-              <label for="first_toggle">1</label>
-              <label for="second_toggle">2</label>
-              <label for="third_toggle">3</label>
-              <input
-                type="radio"
-                class="toggle_option"
-                id="first_toggle"
-                name="toggle_option"
-                value="1"
-                checked
-              />
-              <input
-                type="radio"
-                class="toggle_option"
-                id="second_toggle"
-                name="toggle_option"
-                value="2"
-              />
-              <input
-                type="radio"
-                class="toggle_option"
-                id="third_toggle"
-                name="toggle_option"
-                value="3"
-              />
-              <div class="toggle_option_slider"></div>
-            </form>
-          </div>
+          <div class="header__theme-box">
+            <h3 class="header__theme-title">theme</h3>
+            <div class="theme__btn-container">
+              <div class="theme__label-box">
+                <button class="theme__label-btn theme__label-btn-1">1</button
+                ><button class="theme__label-btn theme__label-btn-2">2</button
+                ><button class="theme__label-btn theme__label-btn-3">3</button>
+              </div>
+              <div class="theme__slider-box">
+                <button class="theme__slider-position theme__slider-position-1 active">1</button>
+                <button class="theme__slider-position theme__slider-position-2 active">2</button>
+                <button class="theme__slider-position theme__slider-position-3 active">3</button>
+              </div>
+            </div>
         </header>
 
         <div class="output__container">
-          <p class="output__value">399,981</p>
+          <div class="output__previous-term-box">
+            <p data-previous-operand class="output__previous-term"></p>
+          </div>
+          <div class="output__value-box">
+            <p data-current-operand class="output__value">399,981</p>
+          </div>
         </div>
 
         <div class="button__container">
-          <button class="key key-main" id="key7">7</button>
-          <button class="key key-main" id="key8">8</button>
-          <button class="key key-main" id="key9">9</button>
-          <button class="key key-secondary" id="key-del">del</button>
-          <button class="key key-main" id="key4">4</button>
-          <button class="key key-main" id="key5">5</button>
-          <button class="key key-main" id="key6">6</button>
-          <button class="key key-main" id="key-plus">+</button>
-          <button class="key key-main" id="key1">1</button>
-          <button class="key key-main" id="key2">2</button>
-          <button class="key key-main" id="key3">3</button>
-          <button class="key key-main" id="key-minus">-</button>
-          <button class="key key-main" id="key-dot">.</button>
-          <button class="key key-main" id="key0">0</button>
-          <button class="key key-main" id="key-divide">/</button>
-          <button class="key key-main" id="key-mult">x</button>
-          <button class="key key-secondary" id="key-reset">reset</button>
-          <button class="key key-equals" id="key-equals">=</button>
+          <button data-number class="key key-main" id="key7">7</button>
+          <button data-number class="key key-main" id="key8">8</button>
+          <button data-number class="key key-main" id="key9">9</button>
+          <button data-delete class="key key-secondary" id="key-del">
+            del
+          </button>
+          <button data-number class="key key-main" id="key4">4</button>
+          <button data-number class="key key-main" id="key5">5</button>
+          <button data-number class="key key-main" id="key6">6</button>
+          <button data-operation class="key key-main" id="key-add">+</button>
+          <button data-number class="key key-main" id="key1">1</button>
+          <button data-number class="key key-main" id="key2">2</button>
+          <button data-number class="key key-main" id="key3">3</button>
+          <button data-operation class="key key-main" id="key-subtract">
+            -
+          </button>
+          <button data-number class="key key-main" id="key-dot">.</button>
+          <button data-number class="key key-main" id="key0">0</button>
+          <button data-operation class="key key-main" id="key-divide">/</button>
+          <button data-operation class="key key-main">x</button>
+          <button data-reset class="key key-secondary" id="key-reset">
+            reset
+          </button>
+          <button data-equals class="key key-equals" id="key-equals">=</button>
         </div>
       </div>
     </main>
