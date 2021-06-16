@@ -1,0 +1,48 @@
+.theme {
+  // box with labels and slider
+  &__btn-container {
+    display: grid;
+    // margin-bottom: 5px;
+    padding-bottom: 30px;
+  }
+  //labels
+  &__label-box {
+    display: flex;
+    justify-content: space-between;
+    // padding: 4px 4px;
+    margin: 0 8px 3px 11px;
+  }
+
+  &__label-btn {
+    color: var(--text-header);
+    font-size: 0.8rem;
+    &-2 {
+      margin-left: 2px;
+    }
+  }
+
+  // slider box
+  &__slider-box {
+    width: 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--toggle-key-bg);
+    padding: 5px;
+    border-radius: 100px;
+  }
+
+  &__slider-position {
+    background-color: var(--key-bg-accent);
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    color: transparent;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  &__slider-position.active {
+    opacity: 1;
+  }
+}
