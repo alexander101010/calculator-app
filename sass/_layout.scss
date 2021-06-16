@@ -1,0 +1,109 @@
+main {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 3rem 0;
+}
+
+.container {
+  width: 40rem;
+  // width: 37.5rem; //FIXME: temporary fixed width
+  // height: 80vh;
+  display: grid;
+  // grid-template-rows: auto minmax(10rem, auto);
+
+  grid-row-gap: 2rem;
+}
+
+// HEADER calc title and theme slider
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // margin-bottom: 1.9rem;
+  // color: var(--)
+  color: var(--text-header);
+
+  &__theme-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__theme-title {
+    text-transform: uppercase;
+    margin-right: 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+}
+
+// OUTPUT
+.output {
+  &__container {
+    background-color: var(--screen-bg); // TODO: THEME
+    border-radius: var(--container-radius);
+    // height: minmax(13rem, auto);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // align-items: center;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  &__previous-term {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-left: 2.5rem;
+    min-height: 3rem;
+    line-height: 1;
+    align-self: center;
+
+    color: var(--text-output-previous);
+
+    &-box {
+      // border: 1px solid goldenrod;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      // display: none;
+    }
+  }
+
+  &__value {
+    text-align: right;
+    font-size: 3.4rem;
+    color: var(--text-output); // TODO: THEME
+    word-wrap: break-word;
+    word-break: break-all;
+    padding-right: 2.5rem;
+    &-box {
+      min-height: 8rem;
+      // border: 1px solid goldenrod;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      // padding: 2.5rem;
+    }
+  }
+}
+
+// button container
+.button__container {
+  background-color: var(--toggle-key-bg);
+  border-radius: var(--container-radius);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  padding: 2rem;
+}
+
+#key-reset {
+  grid-column: 1 / span 2;
+}
+
+#key-equals {
+  grid-column: 3 / span 2;
+}
