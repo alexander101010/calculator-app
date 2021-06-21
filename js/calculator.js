@@ -36,8 +36,8 @@ export class Calculator {
 
   compute() {
     let computation;
-    const firstTerm = parseInt(this.previousOperand, 10);
-    const secondTerm = parseInt(this.currentOperand, 10);
+    const firstTerm = parseFloat(this.previousOperand, 10);
+    const secondTerm = parseFloat(this.currentOperand, 10);
     // Guard against equals press with only 1 operand ie 5+=
     if (isNaN(firstTerm) || isNaN(secondTerm)) return;
     switch (this.operation) {
